@@ -7,7 +7,6 @@ from models import Account, User, Transaction as TransactionModel
 from typing import List
 from fastapi_jwt_auth import AuthJWT
 
-
 router = APIRouter()
 
 @router.get('/accounts/all', response_model = List[ShowAccount])
