@@ -34,6 +34,10 @@ app.add_middleware(
 def get_config():
     return Settings()
 
+@app.get('/')
+def read_root():
+    return {'message' : 'heyy there'}
+
 @app.get('/api')
 async def root():
     return {"msg" : "Connected with backend"}
